@@ -1,0 +1,26 @@
+.btn-container {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+.btn-custom {
+    width: 50%;
+    margin: 0 auto;
+    padding: 100px;
+    background: linear-gradient(to right, #8E2DE2, #4A00E0);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    text-align: center;
+    transition-duration: 300ms;
+}
+
+.btn-custom:hover {
+    color: white;
+    text-decoration: none;
+    transform: scale(1.05);
+}
