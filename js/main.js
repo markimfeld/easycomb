@@ -112,6 +112,7 @@ $(document).ready(() => {
         }
     ]
 
+
     let totalProducts = [];
     let resultProducts = {
         "empanadas": 0,
@@ -169,6 +170,9 @@ $(document).ready(() => {
         }
     }
 
+    const toPaid = (quantity) => {
+        return quantity * COMBO_PRICE;
+    }
 
 
     const mergeProducts = () => {
@@ -229,6 +233,14 @@ $(document).ready(() => {
 
         clear();
     })
+
+    $('#totalComboForm').submit(function (event) {
+        event.preventDefault();
+        let quantityCombo = $('#cantidadCombos').val();
+        let amountToPaid = toPaid(quantityCombo);
+        $('#resultAmountToPaid').empty();
+        $('#resultAmountToPaid').append(`Total: $ ${amountToPaid}`)
+    });
 
 
 })
