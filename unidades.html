@@ -36,52 +36,10 @@
 
     <div class="container py-3">
         <div class="row">
-            <div class="col col-sm-12 col-md-6 mx-auto mt-5">
+            <!-- CARD UNINDADES TOTALES -->
+            <div class="col">
                 <div class="card">
-                    <form id="totalComboForm" action="unidades.html" method="get">
-                        <div class="card-body">
-                            <div class="form-group">
-                                <label for="quantity">Cantidad de Combos</label>
-                                <input id="cantidadCombos" name="quantity" type="number" class="form-control">
-                            </div>
-                            <div class="d-flex justify-content-end">
-
-                                <!-- Button trigger modal -->
-                                <button type="submit" class="btn btn-success" data-toggle="modal"
-                                    data-target="#exampleModal">
-                                    Calcular Monto Total
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-                    aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Monto a cobrar</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body" id="resultAmountToPaid">
-
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- <div class="row"> -->
-            <div class="col col-sm-12 col-md-6 mx-auto mt-5">
-                <div class="card">
-                    <h2 class="card-title text-center pt-3">EasyComb</h2>
+                    <h2 class="card-title text-center pt-3">Calcular Unidades Totales</h2>
                     <form id="addComboForm" action="unidades.html" method="get">
                         <div class="card-body">
                             <div class="form-group">
@@ -92,19 +50,60 @@
                                 <label for="type">Cantidad</label>
                                 <input id="quantityCombos" name="quantity" type="number" class="form-control">
                             </div>
-                            <div class="d-flex flex-row justify-content-end">
-                                <button id="btnAdd" type="submit" class="btn btn-success">Agregar
+                            <div class="d-flex flex-row justify-content-between">
+                                <button id="btnCalcular" type="button" class="btn btn-success">Calcular</button>
+                                <button id="btnAdd" type="submit" class="btn btn-primary">Agregar
                                     <i class="fas fa-plus ml-1"></i></button>
                             </div>
-                        </div>
                     </form>
                 </div>
             </div>
-            <!-- </div> -->
+        </div>
+        <!-- Card Monto total -->
+        <div class="col">
+            <div class="card">
+                <form id="totalComboForm" action="unidades.html" method="get">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="quantity">Cantidad de Combos</label>
+                            <input id="cantidadCombos" name="quantity" type="number" class="form-control">
+                        </div>
+                        <div class="d-flex justify-content-end">
+
+                            <!-- Button trigger modal -->
+                            <button type="submit" class="btn btn-success" data-toggle="modal"
+                                data-target="#exampleModal">
+                                Calcular Monto Total
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Monto a cobrar</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body" id="resultAmountToPaid">
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="container mt-5 d-none" id="previewContainer">
+    <div class="container mt-5 d-none" id="previewContainer" style="height: 300px;">
         <div class="col col-md-6 mx-auto mt-5">
             <table class="table table-bordered table-dark">
                 <thead class="text-center">
@@ -117,9 +116,7 @@
 
                 </tbody>
             </table>
-            <div class="d-flex flex-row justify-content-end pb-4">
-                <button id="btnCalcular" type="button" class="btn btn-success">Calcular</button>
-            </div>
+
         </div>
     </div>
 
@@ -142,6 +139,60 @@
     </div>
 
 
+    <div class="row mt-5">
+        <div class="col col-md-6">
+            <ul class="list-group">
+                <li class="list-group-item bg-dark text-center text-white h3">Tu pedido</li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span>Tipo 3</span>
+                    <span class="badge badge-warning">4</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span>Tipo 5</span>
+                    <span class="badge badge-warning">4</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span>Tipo 1</span>
+                    <span class="badge badge-warning">4</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span>Tipo 4</span>
+                    <span class="badge badge-warning">4</span>
+                </li>
+            </ul>
+        </div>
+        <div class="col col-md-6">
+            <ul class="list-group">
+                <li class="list-group-item bg-dark text-center text-white h3">Entrega</li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span>Empanadas</span>
+                    <span class="badge badge-success">4</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span>Fideos</span>
+                    <span class="badge badge-success">4</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span>Ravioles</span>
+                    <span class="badge badge-success">4</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span>Pascualinas</span>
+                    <span class="badge badge-success">4</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="text-white bg-dark fixed-bottom">
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2020 - EasyComb. Todos los derechos reservados.
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
 
     <script src="jquery/jquery-3.5.1.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
