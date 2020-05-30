@@ -109,6 +109,20 @@ $(document).ready(() => {
                     'quantity': 1
                 }
             ]
+        },
+        {
+            'type': 8,
+            'price': 180.0,
+            'products': [
+                {
+                    'name': 'Pascualina',
+                    'quantity': 3
+                },
+                {
+                    'name': 'Empanadas',
+                    'quantity': 1
+                }
+            ]
         }
     ]
 
@@ -166,6 +180,9 @@ $(document).ready(() => {
             calculateUnits(comboType, quantity);
         }
         if (comboType == 7) {
+            calculateUnits(comboType, quantity);
+        }
+        if (comboType == 8) {
             calculateUnits(comboType, quantity);
         }
     }
