@@ -192,45 +192,56 @@ $(document).ready(() => {
         }
     }
 
+
     $('#addComboForm').submit(function (event) {
         event.preventDefault();
         let type = $('#typeCombos').val();
         let quantity = $('#quantityCombos').val();
 
         getTotalComboUnits(type, quantity);
+        
+        $('.default-item').remove();
 
-        $('#tbody').append(`
-        <tr>
-            <td>${type}</td>
-            <td>${quantity}</td>
-        </tr>
+        $('#resultPreview').append(`
+            
+            <li class="list-group-item item d-flex justify-content-between align-items-center">
+                <span>Nº ${type}</span>
+                <span class="badge badge-warning">${quantity}</span>
+            </li>
         `);
 
         $('#typeCombos').val('');
         $('#quantityCombos').val('');
-
-        $('#resultContainer').removeClass("d-block");
-        $('#previewContainer').addClass("d-block");
-
     })
 
     btnCalcular.click(() => {
-        $('#previewContainer').removeClass("d-block");
-        $('#tbody').empty();
-        $('#resultTableBody').empty();
-        $('#resultContainer').addClass("d-block");
+
+        $('#resultPreview').empty();
 
         mergeProducts();
-
-        $('#resultTableBody').append(`
-            <tr>
-                <td>${resultProducts.empanadas}</td>
-                <td>${resultProducts.fideo}</td>
-                <td>${resultProducts.raviol}</td>
-                <td>${resultProducts.pascualina}</td>
-            </tr>
+        $('#resultProducts').empty();
+        $('#resultProducts').append(`
+            <li class="list-group-item bg-dark text-center text-white h3">
+                <span>Total de Productos</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span>Empanadas</span>
+                <span class="badge badge-success">${resultProducts.empanadas}</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span>Fideos</span>
+                <span class="badge badge-success">${resultProducts.fideo}</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span>Ravioles</span>
+                <span class="badge badge-success">${resultProducts.raviol}</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span>Pascualinas</span>
+                <span class="badge badge-success">${resultProducts.pascualina}</span>
+            </li>
         `)
-
+        
         clear();
     })
 
