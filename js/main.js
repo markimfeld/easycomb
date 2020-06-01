@@ -123,7 +123,40 @@ $(document).ready(() => {
                     'quantity': 1
                 }
             ]
+        },
+        {
+            'type': 9,
+            'price': 180.0,
+            'products': [
+                {
+                    'name': 'Fideo',
+                    'quantity': 2
+                },
+                {
+                    'name': 'Empanadas',
+                    'quantity': 2
+                }
+            ]
+        },
+        {
+            'type': 10,
+            'price': 180.0,
+            'products': [
+                {
+                    'name': 'Fideo',
+                    'quantity': 1
+                },
+                {
+                    'name': 'Pascualina',
+                    'quantity': 1
+                }, 
+                {
+                    'name': 'Raviol',
+                    'quantity': 1
+                }
+            ]
         }
+        
     ]
 
 
