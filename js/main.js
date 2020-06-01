@@ -149,14 +149,14 @@ $(document).ready(() => {
                 {
                     'name': 'Pascualina',
                     'quantity': 1
-                }, 
+                },
                 {
                     'name': 'Raviol',
                     'quantity': 1
                 }
             ]
         }
-        
+
     ]
 
 
@@ -218,6 +218,12 @@ $(document).ready(() => {
         if (comboType == 8) {
             calculateUnits(comboType, quantity);
         }
+        if (comboType == 9) {
+            calculateUnits(comboType, quantity);
+        }
+        if (comboType == 10) {
+            calculateUnits(comboType, quantity);
+        }
     }
 
     const toPaid = (quantity) => {
@@ -249,7 +255,7 @@ $(document).ready(() => {
         let quantity = $('#quantityCombos').val();
 
         getTotalComboUnits(type, quantity);
-        
+
         $('.default-item').remove();
 
         $('#resultPreview').append(`
@@ -291,7 +297,7 @@ $(document).ready(() => {
                 <span class="badge badge-success">${resultProducts.pascualina}</span>
             </li>
         `)
-        
+
         clear();
     })
 
